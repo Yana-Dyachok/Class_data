@@ -66,7 +66,7 @@ void Data::OutDataddmmyyyy() {// ìåòîä âèâîäèòü äàòó ó ôîð�
 
 void Data::OutDataddMonthyyyy() {// ìåòîä âèâîäèòü äàòó ó ôîðìàò³ ää ì³ñÿöü ðððð, íàïðèêëàä 02 March 2019.
 	check();
-	std::cout << this->day;
+	std::cout << this->day<<' ';
 	string Month[] = {"January","February","March"," April","May","June","July","August","September","October","November","December"};
 	std::cout << Month[this->month-1] << ' ';
 	std::cout << this->year;	
