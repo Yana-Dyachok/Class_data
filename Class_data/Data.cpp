@@ -15,22 +15,22 @@ Data::Data(int D, int M, int Y){
 }
 
 
-void Data::setDay(int a) {// метод, який змінює значення дати класу;
+void Data::setDay(int a) {// Г¬ГҐГІГ®Г¤, ГїГЄГЁГ© Г§Г¬ВіГ­ГѕВє Г§Г­Г Г·ГҐГ­Г­Гї Г¤Г ГІГЁ ГЄГ«Г Г±Гі;
 	this->day = a;
 }
 
 
-void Data:: setMonth( int a) {// метод, який змінює значення місяця;
+void Data:: setMonth( int a) {// Г¬ГҐГІГ®Г¤, ГїГЄГЁГ© Г§Г¬ВіГ­ГѕВє Г§Г­Г Г·ГҐГ­Г­Гї Г¬ВіГ±ГїГ¶Гї;
 	this->month = a;
 }
 
 
-void Data::setYear(int a) {// метод, який змінює значення року класу;
+void Data::setYear(int a) {// Г¬ГҐГІГ®Г¤, ГїГЄГЁГ© Г§Г¬ВіГ­ГѕВє Г§Г­Г Г·ГҐГ­Г­Гї Г°Г®ГЄГі ГЄГ«Г Г±Гі;
 	this->year = a;
 }
 
 
-bool Data::verifikation() {//  метод, який перевіряє коректність дати і повертає(true / false) відповідно(правильна / неправильна).І якщо дата не правильна надає значення 01.01.1900;
+bool Data::verifikation() {//  Г¬ГҐГІГ®Г¤, ГїГЄГЁГ© ГЇГҐГ°ГҐГўВіГ°ГїВє ГЄГ®Г°ГҐГЄГІГ­ВіГ±ГІГј Г¤Г ГІГЁ Ві ГЇГ®ГўГҐГ°ГІГ Вє(true / false) ГўВіГ¤ГЇГ®ГўВіГ¤Г­Г®(ГЇГ°Г ГўГЁГ«ГјГ­Г  / Г­ГҐГЇГ°Г ГўГЁГ«ГјГ­Г ).ВІ ГїГЄГ№Г® Г¤Г ГІГ  Г­ГҐ ГЇГ°Г ГўГЁГ«ГјГ­Г  Г­Г Г¤Г Вє Г§Г­Г Г·ГҐГ­Г­Гї 01.01.1900;
 	if ((this->day < 1 or this->day>31) or (this->month < 1 or this->month>12) or (this->year < 1 or this->year>2050)or(this->day == 31 and (this->month==4 or this->month == 6 or this->month ==9 or this->month == 11)) or (this->month == 2 and this->day >29)){
 		return false;
 		check(); 		
@@ -49,8 +49,7 @@ void Data::check() {
 }
 
 
-void Data::OutDataddmmyy() {// метод виводить дату у форматі дд.мм.рр, наприклад 02.03.19;
-
+void Data::OutDataddmmyy() {// Г¬ГҐГІГ®Г¤ ГўГЁГўГ®Г¤ГЁГІГј Г¤Г ГІГі Гі ГґГ®Г°Г¬Г ГІВі Г¤Г¤.Г¬Г¬.Г°Г°, Г­Г ГЇГ°ГЁГЄГ«Г Г¤ 02.03.19;
 	check();
 	if (this->year > 1000) {
 		int Y = this->year % 100;
@@ -59,13 +58,13 @@ void Data::OutDataddmmyy() {// метод виводить дату у форматі дд.мм.рр, наприклад
 	}
 
 
-void Data::OutDataddmmyyyy() {// метод виводить дату у форматі дд.мм.рррр, наприклад 02.03.2019;
+void Data::OutDataddmmyyyy() {// Г¬ГҐГІГ®Г¤ ГўГЁГўГ®Г¤ГЁГІГј Г¤Г ГІГі Гі ГґГ®Г°Г¬Г ГІВі Г¤Г¤.Г¬Г¬.Г°Г°Г°Г°, Г­Г ГЇГ°ГЁГЄГ«Г Г¤ 02.03.2019;
 	check();
 	std::cout<< this->day<<"."<< this->month<<"."<< this->year<<std::endl;
 }
 
 
-void Data::OutDataddMonthyyyy() {// метод виводить дату у форматі дд місяць рррр, наприклад 02 March 2019.
+void Data::OutDataddMonthyyyy() {// Г¬ГҐГІГ®Г¤ ГўГЁГўГ®Г¤ГЁГІГј Г¤Г ГІГі Гі ГґГ®Г°Г¬Г ГІВі Г¤Г¤ Г¬ВіГ±ГїГ¶Гј Г°Г°Г°Г°, Г­Г ГЇГ°ГЁГЄГ«Г Г¤ 02 March 2019.
 	check();
 	std::cout << this->day<<' ';
 	string Month[] = {"January","February","March"," April","May","June","July","August","September","October","November","December"};
